@@ -4,8 +4,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script defer src="script.js"></script>
 </head>
-<body>
-	<h1>Teszt</h1>
+<body class="bg-gradient-to-r from-cyan-500 to-blue-800 | text-center text-white | flex items-center justify-center h-screen transition-all">
+	<div class="p-2 border-2 rounded-md border-blue-400 shadow-xl shadow-black/50 w-[400px] bg-gradient-to-r from-cyan-600 to-black/30 flex-col items-center justify-center transition-all">
+		<h1 class="text-2xl m-1 font-bold tracking-widest sm:text-4xl transition-all">Találd ki a számot</h1>
+		<div id="doboz" class="w-[80%] sm:text-xl text-sm pt-1 pb-1  border-2 m-auto rounded-md border-blue-400 shadow-inner shadow-black/50 text-center transition-all">|</div>
+		<input type="text" id="beirt" placeholder="Adj meg egy számot" class="w-[60%] sm:text-xl text-sm bg-transparent outline-none text-center p-1 border-2 border-blue-400 rounded-md m-2 shadow-inner shadow-black/50 transition-all">
+		<button onclick="Check()" id="gomb" class=" disabled:opacity-60 p-1 border-2 border-blue-400 rounded-md hover:scale-110 transition-all m-auto flex sm:text-xl text-sm">Ellenőrzés</button>
+		<p>Hátralevő próbálkozások: <span id="vicces"></span></p>
+	</div>
+	
 </body>
 </html>
